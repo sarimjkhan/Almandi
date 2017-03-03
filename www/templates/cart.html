@@ -1,0 +1,51 @@
+<ion-view view-title="cart">
+    <div class="bar bar-header header-bar-color">
+        <button menu-toggle = "left" class = "button button-icon icon ion-navicon"> Cart </button>
+        <img src="img/basket_empty.png" style="position:fixed;right:0px;height:37px;width:83px;"></img>
+    </div>
+    <ion-content class="has-header" style="background-color: rgb(228,224,212);">
+        <div ng-repeat="product in cartProducts" class="card" style="margin-bottom: 5px;">
+            <div class="row">
+                <div class="col-md-6 col-xs-6">
+                    <img src="{{product.imgurl}}" style="height: 150px;width: 140px;">
+                </div>    
+                <div class="col-md-6 col-xs-6" style="padding:0px;">
+                    <div >
+                        <h4 class="col-md-8 col-xs-10" style="padding:0px; margin-bottom:0;"> {{product.name}} </h4>
+                        <img class="pull-right" src="img/cart_delete.png" style="height: 25px; width: 25px; "/>
+                        <h5 class="col-md-8 col-xs-10" style="padding: 0;"> Add note</h5>
+                    </div>
+                    <div class="row" style="position: absolute; bottom: 0; width:125%;">
+                        <div class="col-md-6 col-xs-6 pull-left" style="padding:2px; width:45%;">
+                        <img src="img/cart_minus.png" style="height: 35px;">
+                        <img src="img/cart_plus.png" style="height: 35px;">
+                        </div>
+                          <div class="col-md-6 col-xs-6 pull-left" style="padding:0px; margin-top:10px;">
+                        <small style="font-size:9px"> {{product.size}} |</small>
+                         <span style="color:red;font-size:12px;">{{product.price}} Aed</span>
+                          </div>
+                    </div>    
+                </div>
+            </div>    
+        </div>
+        <div class="row" style="margin-bottom: 50px;background-color: rgb(255,255,255);">
+            <div class="col-md-5 col-xs-5">
+                <span style="font-size: 20px;">Total 80 Aed</span>
+            </div>
+            <div class="col-md-7 col-xs-7">
+                <Button class="button-full">add your note</Button>
+            </div>
+        </div>  
+    </ion-content>
+    <!--<div class="bar bar-footer">   
+        
+    </div> -->
+    <div class="bar bar-footer" style="">
+        
+        <div class="button-bar">
+            <a style="background-color: rgb(248,206,86);" class="button" ng-click = "handleScheduleClick()">Schedule</a>
+            <a style="background-color: rgb(246,147,28);" class="button" ng-click = "handleOrderNowClick()">Order Now</a>
+        </div> 
+    </div> 
+    
+</ion-view>

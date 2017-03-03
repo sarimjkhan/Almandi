@@ -1,0 +1,41 @@
+<ion-view view-title="products">
+    <div class="bar bar-header header-bar-color">
+        <button id="leftMenuBtnId" menu-toggle = "left" class = "button button-icon icon ion-navicon"> Menu </button>
+        <img src="img/basket_empty.png" style="position:fixed;right:0px;height:37px;width:83px;"></img>
+    </div>
+    <ion-content class="has-header" style="background-color: rgb(228,224,212);">
+        <div ng-repeat="category in categories" style="margin-left: 15px;">
+            <div style="position: relative;background-color: white;margin-top:5px;">
+                <div style="display: inline;font-size: 20px;" > 
+                    <strong>{{category.name}}</strong>
+                </div>
+                <div style="position: absolute;display: inline; right: 0;">
+                    <span style="color: orangered";>{{category.numberOfDishes}} Dishes</span>
+                </div>         
+            </div>    
+            <ion-scroll  overflow-scroll="false" style="overflow: hidden;" scrollbar-x="false" scrollbar-y="false" direction="x" >
+                <!--<ion-slide style="background-color: rgb(228,224,212);"> -->
+                        
+            <div class="row" style="margin-left: 1px;white-space: nowrap;">
+                <div class="col-md-5 col-xs-5" ng-click = "showPopup()" ng-repeat = "product in category.products" style="display: inline;position: relative; margin-left: 0px; background-color: white;width:140px;">
+                    <div class="row" style="margin-right: 20px;">
+                        <img style="height: 150px; width: 180px; margin-bottom: 15px; " src="{{product.imgurl}}">
+                    </div>
+                    <div class="row">
+                        <div class=="col-md-2">
+                            <span style="position: absolute; display:inline-block;bottom:0;left:6px;">{{product.name}}</span>
+                        </div>
+                        <div class=="col-md-2">
+                            <span style="position: absolute; display:inline-block;margin-right: 5px;bottom:0;right:0px;color:red;">{{product.price}}</span>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+                        
+                    
+                    
+                <!--</ion-slide>-->
+            </ion-scroll>
+        </div>
+    </ion-content>
+</ion-view>

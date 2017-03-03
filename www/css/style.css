@@ -1,0 +1,45 @@
+/* Empty. Add your own CSS if you like */
+.header-bar-color{
+    background-color: rgb(186,107,12);
+    border-color: rgb(186,107,12);
+}
+.side-menu-bg{
+    background-image: url('img/backgroud-almandi.png');
+    background-size: cover !important;
+}
+.splash-bg{
+    background-image: url('img/backgroud-almandijpg.jpg');
+    background-size: cover !important;
+    background-position-y: -100px;
+    background-repeat: no-repeat;
+}
+.side-menu-list-item {
+    border-color: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    height: 40px;
+    font-family: DroidArabicKufi;
+    color: white; 
+}
+
+.side-menu-list-item .item-content{
+    color: blanchedalmond !important;
+    background-color: transparent;
+}
+.scroll-container	{
+   width: 2600px;
+   height: 1000px;
+   background: url('img/backgroud-almandijpg.jpg') no-repeat
+}
+.survey > div {
+    display: inline-block;
+    margin: 0 2.5%;
+    width: 20%;
+}
+.survey > div > img {
+    width: 100%;
+}
+.survey {
+    font-size: 0;
+    padding-top: 30px;
+}
